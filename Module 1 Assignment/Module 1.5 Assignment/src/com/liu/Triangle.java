@@ -1,0 +1,91 @@
+package com.liu;
+
+public class Triangle extends TwoDShape implements Rotate{
+    private double side1;
+    private double side2;   //base of triangle
+    private double side3;
+    private double height;
+    private double rotation = 0;
+    private Colour colour;
+
+    public Triangle(double width, double height, Colour colour) {
+        this.side2 = width;
+        this.height = height;
+        this.colour = colour;
+    }
+
+    public Triangle(double side1, double side2, double side3, Colour colour) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+        this.height = heronsHeight();
+        this.colour = colour;
+    }
+
+    @Override
+    public double getArea() {
+        return (side2 * height / 2);
+    }
+
+    public double heronsHeight() {
+        double S = (side1 + side2 + side3) / 2;
+        double A = Math.sqrt(S * (S - side1) * (S - side2) * (S - side3));
+        double h = (2 * A) / side2;
+        return h;
+    }
+
+    public double getSide1() {
+        return side1;
+    }
+
+    public void setSide1(double side1) {
+        this.side1 = side1;
+    }
+
+    public double getSide2() {
+        return side2;
+    }
+
+    public void setSide2(double side2) {
+        this.side2 = side2;
+    }
+
+    public double getSide3() {
+        return side3;
+    }
+
+    public void setSide3(double side3) {
+        this.side3 = side3;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "The triangle's area is " + getArea() + "\n"
+                + "The sides are " + side1 + ", " + side2 + ", " + side3 + "\n"
+                + "It is rotated " + rotation + "°" + "\n"
+                + "The colour is " + colour.getName() + "\n";
+    }
+
+    @Override
+    public void rotate90() {
+        rotation = 90;
+    }
+
+    @Override
+    public void rotate180() {
+        rotation = 180;
+    }
+
+    @Override
+    public void rotate(double degree) {
+        rotation = degree;
+    }
+}
