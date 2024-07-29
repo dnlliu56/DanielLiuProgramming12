@@ -1,0 +1,154 @@
+Baseball Player Stats
+
+-----------------------------------
+
+Sorted by games played: 
+
+Josh Bell - 115 games
+Pete Alonso - 115 games
+Austin Riley - 115 games
+Trea Turner - 114 games
+Jose Abreu - 114 games
+Freddie Freeman - 114 games
+Vladimir Guerrero - 113 games
+Juan Soto - 113 games
+C.J. Cron - 112 games
+Shohei Ohtani - 112 games
+Jose Ramirez - 112 games
+Aaron Judge - 112 games
+Paul Goldschmidt - 108 games
+Manny Machado - 107 games
+Nola Arenado - 106 games
+Brandon Drury - 104 games
+Andres Gimenez - 104 games
+Anthony Rizzo - 103 games
+Luis Arraez - 102 games
+Jose Altuve - 100 games
+Rafael Devers - 99 games
+Yordan Alvarez - 99 games
+Will Smith - 98 games
+Mookie Betts - 97 games
+Byron Buxton - 87 games
+
+-----------------------------------
+
+Sorted by at bats: 
+
+Trea Turner - 465 at bats
+Austin Riley - 453 at bats
+Freddie Freeman - 443 at bats
+C.J. Cron - 437 at bats
+Vladimir Guerrero - 437 at bats
+Jose Abreu - 436 at bats
+Jose Ramirez - 430 at bats
+Pete Alonso - 427 at bats
+Aaron Judge - 420 at bats
+Josh Bell - 418 at bats
+Shohei Ohtani - 417 at bats
+Manny Machado - 412 at bats
+Paul Goldschmidt - 405 at bats
+Mookie Betts - 402 at bats
+Nola Arenado - 401 at bats
+Rafael Devers - 397 at bats
+Brandon Drury - 395 at bats
+Luis Arraez - 385 at bats
+Juan Soto - 385 at bats
+Jose Altuve - 375 at bats
+Anthony Rizzo - 367 at bats
+Will Smith - 356 at bats
+Yordan Alvarez - 345 at bats
+Andres Gimenez - 340 at bats
+Byron Buxton - 323 at bats
+
+-----------------------------------
+
+Sorted by runs: 
+
+Aaron Judge - 96 runs
+Mookie Betts - 85 runs
+Freddie Freeman - 80 runs
+Paul Goldschmidt - 80 runs
+Manny Machado - 75 runs
+Yordan Alvarez - 74 runs
+Trea Turner - 71 runs
+Juan Soto - 71 runs
+Brandon Drury - 69 runs
+Austin Riley - 68 runs
+Pete Alonso - 66 runs
+Vladimir Guerrero - 65 runs
+Rafael Devers - 65 runs
+Anthony Rizzo - 64 runs
+C.J. Cron - 64 runs
+Jose Abreu - 64 runs
+Shohei Ohtani - 64 runs
+Jose Altuve - 64 runs
+Jose Ramirez - 63 runs
+Luis Arraez - 62 runs
+Josh Bell - 60 runs
+Byron Buxton - 59 runs
+Nola Arenado - 58 runs
+Will Smith - 50 runs
+Andres Gimenez - 47 runs
+
+-----------------------------------
+
+Sorted by run percentage: 
+
+Aaron Judge - 22.9%
+Yordan Alvarez - 21.4%
+Mookie Betts - 21.1%
+Paul Goldschmidt - 19.8%
+Juan Soto - 18.4%
+Byron Buxton - 18.3%
+Manny Machado - 18.2%
+Freddie Freeman - 18.1%
+Brandon Drury - 17.5%
+Anthony Rizzo - 17.4%
+Jose Altuve - 17.1%
+Rafael Devers - 16.4%
+Luis Arraez - 16.1%
+Pete Alonso - 15.5%
+Shohei Ohtani - 15.3%
+Trea Turner - 15.3%
+Austin Riley - 15.0%
+Vladimir Guerrero - 14.9%
+Jose Abreu - 14.7%
+Jose Ramirez - 14.7%
+C.J. Cron - 14.6%
+Nola Arenado - 14.5%
+Josh Bell - 14.4%
+Will Smith - 14.0%
+Andres Gimenez - 13.8%
+
+-----------------------------------
+
+Sorted by on base percentage: 
+
+Freddie Freeman - 41.1%
+Paul Goldschmidt - 40.5%
+Luis Arraez - 39.0%
+Rafael Devers - 38.5%
+Jose Ramirez - 37.4%
+Trea Turner - 37.4%
+Andres Gimenez - 37.4%
+Manny Machado - 37.1%
+Austin Riley - 37.1%
+Nola Arenado - 36.9%
+Jose Abreu - 36.7%
+Josh Bell - 35.2%
+Jose Altuve - 34.9%
+Aaron Judge - 34.5%
+Yordan Alvarez - 34.5%
+C.J. Cron - 34.1%
+Vladimir Guerrero - 33.9%
+Mookie Betts - 33.6%
+Will Smith - 33.4%
+Brandon Drury - 33.2%
+Pete Alonso - 33.0%
+Juan Soto - 31.2%
+Shohei Ohtani - 30.2%
+Byron Buxton - 27.6%
+Anthony Rizzo - 27.2%
+
+-----------------------------------
+
