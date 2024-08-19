@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Aug 19 16:06:18 PDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-0191-6ce4-2b60-00001f66a600 
+on database directory C:\Users\dnlli\GitHub\DanielLiuProgramming12\Module 4 Assignment\Module 4 Assignment\myDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528 
+Loaded from file:/C:/Users/dnlli/.m2/repository/org/apache/derby/derby/10.17.1.0/derby-10.17.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=21.0.2+13-LTS-58
+user.dir=C:\Users\dnlli\GitHub\DanielLiuProgramming12\Module 4 Assignment\Module 4 Assignment
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
