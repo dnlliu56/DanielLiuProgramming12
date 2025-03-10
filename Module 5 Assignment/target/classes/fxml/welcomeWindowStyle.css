@@ -1,0 +1,50 @@
+/* Root style for the entire application */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #d1e0d7, #e0d4b8); /* Soft green to slightly more saturated beige gradient */
+}
+
+/* Style for the VBox container */
+.vbox {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-background-radius: 15px; /* Rounded corners for the background */
+    -fx-border-color: #3d405b; /* Dark blue-gray border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px; /* Rounded corners for the border */
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5); /* Subtle shadow for depth */
+}
+
+/* Style for the Welcome Text (larger and bolder) */
+#welcomeTextField {
+    -fx-fill: #5a8a6e; /* Muted green text */
+    -fx-font-family: "Palatino Linotype", "Book Antiqua", serif;
+    -fx-font-size: 24px; /* Larger font size */
+    -fx-font-weight: bold; /* Bold for emphasis */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 2, 0, 0, 1); /* Subtle shadow */
+}
+
+#messageTextField {
+    -fx-fill: #5a8a6e; /* Muted green background */
+    -fx-font-size: 14px; /* Larger font size */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 2, 0, 0, 1); /* Subtle shadow */
+}
+
+/* Style for the Button */
+.button {
+    -fx-background-color: #5a8a6e; /* Muted green background */
+    -fx-text-fill: #f4f1de; /* Light beige text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #6a9c7e; /* Darker green on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #5a8a6e; /* Even darker green when pressed */
+}

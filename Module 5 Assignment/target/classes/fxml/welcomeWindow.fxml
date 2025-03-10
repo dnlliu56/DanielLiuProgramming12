@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="385.0" stylesheets="@welcomeWindowStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.liu.gui.WelcomeWindow">
+   <children>
+      <HBox prefHeight="68.0" prefWidth="600.0" />
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+         <children>
+            <Text fx:id="welcomeTextField" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome [INSERT USER]!" textAlignment="CENTER" wrappingWidth="334.35003662109375" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0">
+         <children>
+            <Text fx:id="messageTextField" strokeType="OUTSIDE" strokeWidth="0.0" text="I hope you are enjoying this website :)" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="159.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#newUser" text="Add new user credentials" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
