@@ -14,6 +14,8 @@ public class Authentication {
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(query)) {
 
+            System.out.println("Database URL: " + connection.getMetaData().getURL());
+
             // If a record is found, the user is authenticated
             return resultSet.next();
 
