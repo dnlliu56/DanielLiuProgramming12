@@ -1,0 +1,108 @@
+/* Root BorderPane styling */
+BorderPane {
+    -fx-background-color: linear-gradient(to bottom right, #403535, #294023);
+}
+
+/* ToolBar styling */
+.tool-bar {
+    -fx-background-color: rgba(64, 53, 53, 0.95); /* Dark brown with slight transparency */
+    -fx-padding: 8 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: rgba(111, 85, 63, 0.4); /* Subtle bottom border */
+}
+
+.tool-bar .button {
+    -fx-background-color: #6f553f;
+    -fx-text-fill: #ffeccf;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 1);
+}
+
+.tool-bar .button:hover {
+    -fx-background-color: #58433a; /* Slightly lighter brown */
+    -fx-text-fill: #fff;
+}
+
+.tool-bar .button:pressed {
+    -fx-background-color: #294023; /* Dark green */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 0);
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Table header */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #403535, #352a2a);
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(111, 85, 63, 0.3);
+    -fx-border-width: 0 1px 0 0;
+    -fx-padding: 10 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #d2c4ae;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 10;
+}
+
+/* Table cells */
+.table-view .table-cell {
+    -fx-text-fill: #403535;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 12;
+    -fx-border-color: transparent;
+}
+
+/* Row styling */
+.table-row-cell {
+    -fx-background-color: rgba(255, 236, 207, 0.85); /* Cream with transparency */
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(210, 196, 174, 0.85); /* Alternate slightly darker */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #6f553f; /* Dark brown for selection */
+    -fx-text-fill: #ffeccf;
+}
+
+/* Scroll bar styling */
+.table-view .scroll-bar:horizontal,
+.table-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(111, 85, 63, 0.4);
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+/* Empty table placeholder */
+.table-view .placeholder .label {
+    -fx-text-fill: #d2c4ae;
+    -fx-font-size: 14px;
+    -fx-padding: 20px;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/15.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.liu.gui.JournalListController"
+      stylesheets="@journal_list.css"
+      spacing="10" alignment="CENTER" prefWidth="600" prefHeight="400">
+
+    <Button text="New Entry" onAction="#openNewEntryWindow" prefWidth="120"/>
+
+    <TableView fx:id="tableView" prefWidth="580" prefHeight="350">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="290">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="modifiedColumn" text="Last Modified" prefWidth="290">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lastModified"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+</VBox>

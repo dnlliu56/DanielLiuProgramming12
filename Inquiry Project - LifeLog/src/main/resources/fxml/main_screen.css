@@ -1,0 +1,50 @@
+/* Root VBox styling */
+VBox {
+    -fx-background-color: linear-gradient(to bottom right, #403535, #294023);
+    -fx-padding: 40;
+    -fx-alignment: center;
+    -fx-spacing: 30;
+}
+
+/* Title Label Styling */
+Label {
+    -fx-font-family: "GothicE";
+    -fx-font-size: 36px;
+    -fx-text-fill: #ffeccf;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);
+}
+
+/* Button Styling - Fixed text cutoff */
+#goToJournalButton {
+    -fx-background-color: rgba(41, 64, 35, 0.8);
+    -fx-text-fill: #d2c4ae;
+    -fx-font-size: 18px;
+    -fx-padding: 15 30 15 30; /* Increased padding */
+    -fx-min-width: 200px; /* Minimum width to prevent cutoff */
+    -fx-pref-width: -1; /* Let button size to content */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3);
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+}
+
+#goToJournalButton:hover {
+    -fx-background-color: rgba(64, 53, 53, 0.9);
+    -fx-text-fill: #ffeccf;
+}
+
+#goToJournalButton:pressed {
+    -fx-background-color: rgba(111, 85, 63, 0.9);
+}
+
+/* HBox containers */
+HBox {
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-padding: 15;
+    -fx-background-color: rgba(210, 196, 174, 0.2);
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: rgba(111, 85, 63, 0.3);
+    -fx-border-width: 1px;
+}

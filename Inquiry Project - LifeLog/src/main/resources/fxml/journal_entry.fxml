@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.liu.gui.JournalEntryController" stylesheets="@journal_entry.css">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Title:"/>
+    <TextField fx:id="titleField"/>
+
+    <Label text="Content:"/>
+    <TextArea fx:id="contentArea" prefRowCount="10"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="saveButton" text="Save" onAction="#handleSave"/>
+        <Button fx:id="exportButton" text="Export as .txt" onAction="#handleExport"/>
+        <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+    </HBox>
+</VBox>

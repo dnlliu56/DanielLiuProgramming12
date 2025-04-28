@@ -1,0 +1,110 @@
+/* Root VBox styling */
+VBox {
+    -fx-background-color: linear-gradient(to bottom right, #403535, #294023);
+    -fx-spacing: 15;
+}
+
+/* Label styling */
+Label {
+    -fx-text-fill: #ffeccf;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5px 0;
+}
+
+/* TextField and TextArea styling */
+TextField, TextArea {
+    -fx-background-color: rgba(255, 236, 207, 0.9);
+    -fx-text-fill: #403535;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: rgba(111, 85, 63, 0.5);
+    -fx-border-width: 1px;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
+}
+
+TextArea .content {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+}
+
+/* Button container styling */
+HBox {
+    -fx-spacing: 10;
+    -fx-alignment: center-right;
+    -fx-padding: 10 0 0 0;
+}
+
+/* Base button styling */
+.button {
+    -fx-min-width: 100px;
+    -fx-pref-height: 35px;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3);
+    -fx-cursor: hand;
+    -fx-padding: 0 15;
+}
+
+/* Save button */
+#saveButton {
+    -fx-background-color: rgba(41, 64, 35, 0.9);
+    -fx-text-fill: #ffeccf;
+}
+
+#saveButton:hover {
+    -fx-background-color: rgba(41, 64, 35, 1);
+}
+
+#saveButton:pressed {
+    -fx-background-color: rgba(32, 50, 27, 0.9);
+}
+
+/* Export button */
+#exportButton {
+    -fx-background-color: rgba(111, 85, 63, 0.9);
+    -fx-text-fill: #ffeccf;
+}
+
+#exportButton:hover {
+    -fx-background-color: rgba(111, 85, 63, 1);
+}
+
+#exportButton:pressed {
+    -fx-background-color: rgba(89, 68, 50, 0.9);
+}
+
+/* Delete button */
+#deleteButton {
+    -fx-background-color: rgba(64, 53, 53, 0.9);
+    -fx-text-fill: #ffeccf;
+}
+
+#deleteButton:hover {
+    -fx-background-color: rgba(64, 53, 53, 1);
+}
+
+#deleteButton:pressed {
+    -fx-background-color: rgba(51, 42, 42, 0.9);
+}
+
+/* Focus states */
+TextField:focused, TextArea:focused {
+    -fx-border-color: rgba(41, 64, 35, 0.8);
+    -fx-effect: dropshadow(three-pass-box, rgba(41,64,35,0.2), 8, 0, 0, 5);
+}
+
+/* Scroll bar styling */
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(111, 85, 63, 0.5);
+    -fx-background-radius: 4px;
+}

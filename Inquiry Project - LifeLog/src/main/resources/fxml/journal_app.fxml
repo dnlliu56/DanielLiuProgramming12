@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.liu.gui.JournalListController" stylesheets="@journal_app.css">
+    <top>
+        <ToolBar>
+            <Button text="New Entry" onAction="#openNewEntryWindow"/>
+        </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title" prefWidth="200"/>
+                <TableColumn fx:id="modifiedColumn" text="Last Modified" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
