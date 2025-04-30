@@ -23,6 +23,7 @@ public class JournalListController {
 
     private final JournalDAO journalDAO = new JournalDAO();
 
+    // This method runs when the screen loads — sets up the table and loads entries
     @FXML
     public void initialize() {
         titleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
@@ -33,6 +34,7 @@ public class JournalListController {
 
         loadEntries();
 
+        // Lets user double-click a row to edit the entry
         tableView.setRowFactory(tv -> {
             TableRow<JournalEntry> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -44,11 +46,13 @@ public class JournalListController {
         });
     }
 
+    // Loads all journal entries from the database and displays them in the table
     private void loadEntries() {
         ObservableList<JournalEntry> entries = FXCollections.observableArrayList(journalDAO.getAllEntries());
         tableView.setItems(entries);
     }
 
+    // Opens a new window for creating a brand new journal entry
     @FXML
     private void openNewEntryWindow() {
         try {
@@ -57,7 +61,7 @@ public class JournalListController {
 
             JournalEntryController controller = loader.getController();
             controller.setJournalDAO(journalDAO);
-            controller.setListController(this); // for refreshing after save
+            controller.setListController(this); // So the list can refresh later
 
             Stage stage = new Stage();
             stage.setTitle("New Journal Entry");
@@ -68,29 +72,30 @@ public class JournalListController {
         }
     }
 
+    // Opens the selected journal entry in a new window for editing
     private void openEntryEditor(JournalEntry entry) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/journal_entry.fxml"));
             Parent root = loader.load();
 
             JournalEntryController controller = loader.getController();
-            controller.setJournalDAO(journalDAO);   // Add this
-            controller.setListController(this);     // Add this
-            controller.setJournalEntry(entry);      // Already there
+            controller.setJournalDAO(journalDAO);
+            controller.setListController(this);
+            controller.setJournalEntry(entry); // Load the existing entry into the form
 
             Stage stage = new Stage();
             stage.setTitle("Edit Journal Entry");
             stage.setScene(new Scene(root));
             stage.showAndWait();
 
-            loadEntries();
+            loadEntries(); // Refresh the list after editing
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    // Refreshes the table of entries (e.g., after saving or deleting)
     public void refreshEntries() {
         loadEntries();
     }
-
 }
