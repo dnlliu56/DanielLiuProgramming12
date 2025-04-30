@@ -14,20 +14,22 @@ public class MainScreenController {
     @FXML
     private Button goToJournalButton;
 
+    // This method runs when the "Go to Journal" button is clicked.
+    // It switches the screen to the journal list view.
     @FXML
     private void goToJournalList() throws IOException {
-        // Load the journal list FXML
+        // Load the journal list FXML file
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/journal_list.fxml"));
-        Parent root = loader.load(); // Load the FXML
+        Parent root = loader.load(); // Load the design/layout
 
-        // If you want to access the controller later, you can do so like this
+        // Get the controller for the journal list screen (optional here, but useful if you need to talk to it)
         JournalListController controller = loader.getController();
 
-        // Switch to the journal list scene
+        // Set up the new scene and switch to it using the same window
         Scene scene = new Scene(root);
-        Stage stage = (Stage) goToJournalButton.getScene().getWindow(); // Use the button's scene to get the stage
-        stage.setScene(scene);
-        stage.show();
+        Stage stage = (Stage) goToJournalButton.getScene().getWindow(); // Get the current window
+        stage.setScene(scene); // Set the new screen
+        stage.show(); // Show it
     }
 
 }
