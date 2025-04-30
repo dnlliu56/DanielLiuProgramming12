@@ -23,56 +23,59 @@ public class JournalEntryController {
     private JournalListController listController;
     private JournalEntry currentEntry;
 
+    // Lets this controller talk to the database
     public void setJournalDAO(JournalDAO dao) {
         this.journalDAO = dao;
     }
 
+    // Connects this controller to the list controller (for refreshing the list)
     public void setListController(JournalListController controller) {
         this.listController = controller;
     }
 
+    // Loads an existing journal entry into the text fields
     public void setJournalEntry(JournalEntry entry) {
         this.currentEntry = entry;
         titleField.setText(entry.getTitle());
         contentArea.setText(entry.getContent());
     }
 
+    // Runs when the "Save" button is clicked — saves or updates an entry
     @FXML
     private void handleSave() {
         String title = titleField.getText();
         String content = contentArea.getText();
 
         if (title.isBlank() || content.isBlank()) {
-            return; // Optionally show an alert
+            return; // Could show a warning here
         }
 
         if (currentEntry == null) {
-            journalDAO.addEntry(title, content);
+            journalDAO.addEntry(title, content); // Add new entry
         } else {
-            journalDAO.updateEntry(currentEntry.getId(), title, content);
+            journalDAO.updateEntry(currentEntry.getId(), title, content); // Update existing one
         }
 
         if (listController != null) {
-            listController.refreshEntries();
+            listController.refreshEntries(); // Refresh the list after saving
         }
 
+        // Close the window after saving
         Stage stage = (Stage) saveButton.getScene().getWindow();
         stage.close();
     }
 
+    // Runs when the "Export" button is clicked — saves the entry as a .txt file
     @FXML
     private void handleExport() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Export Journal Entry");
 
-        // Suggest a default filename based on title
         String defaultTitle = titleField.getText().isEmpty() ? "untitled" : titleField.getText().replaceAll("\\s+", "_");
         fileChooser.setInitialFileName(defaultTitle + ".txt");
 
-        // Set extension filter
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
 
-        // Show save dialog
         File file = fileChooser.showSaveDialog(exportButton.getScene().getWindow());
 
         if (file != null) {
@@ -80,19 +83,19 @@ public class JournalEntryController {
                 writer.write("Title: " + titleField.getText() + "\n\n");
                 writer.write(contentArea.getText());
             } catch (IOException e) {
-                e.printStackTrace();
-                // Optionally show an error dialog
+                e.printStackTrace(); // Could show an error message
             }
         }
     }
 
+    // Runs when the "Delete" button is clicked — asks for confirmation and deletes the entry
     @FXML
     private void handleDelete() {
         if (currentEntry == null) {
-            return; // Optionally show an alert for no entry selected
+            return; // Could show a message that nothing is selected
         }
 
-        // Show a confirmation dialog before deleting
+        // Ask the user to confirm deletion
         Alert alert = new Alert(Alert.AlertType.WARNING, "This action cannot be undone.", ButtonType.YES, ButtonType.NO);
         alert.setTitle("Confirm Deletion");
         alert.setHeaderText("Delete Entry?");
@@ -102,10 +105,10 @@ public class JournalEntryController {
             journalDAO.deleteEntry(currentEntry.getId());
 
             if (listController != null) {
-                listController.refreshEntries();
+                listController.refreshEntries(); // Update the list after deletion
             }
 
-            // Close the window after deletion
+            // Close the window after deleting
             Stage stage = (Stage) saveButton.getScene().getWindow();
             stage.close();
         }
