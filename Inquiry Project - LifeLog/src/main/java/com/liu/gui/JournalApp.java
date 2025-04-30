@@ -6,16 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+// Main class that starts the JavaFX journal app
 public class JournalApp extends Application {
 
+    // This method runs when the app starts — it sets up the first screen
     @Override
     public void start(Stage primaryStage) {
         try {
-            // Load the main screen FXML file
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main_screen.fxml"));
             Parent root = loader.load();
-
-            // Set the scene and the stage
             primaryStage.setTitle("LifeLog");
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
@@ -24,6 +23,7 @@ public class JournalApp extends Application {
         }
     }
 
+    // This is the main method — it launches the whole app
     public static void main(String[] args) {
         launch(args);
     }
